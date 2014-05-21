@@ -169,6 +169,10 @@ module.exports = HomeController = (function(_super) {
 })(Controller);
 });
 
+;require.register("controllers/search-controller", function(exports, require, module) {
+
+});
+
 ;require.register("initialize", function(exports, require, module) {
 var Application, routes;
 
@@ -278,7 +282,8 @@ module.exports = Model = (function(_super) {
 
 ;require.register("routes", function(exports, require, module) {
 module.exports = function(match) {
-  return match('', 'home#index');
+  match('', 'home#index');
+  return match('search', 'search#index');
 };
 });
 
